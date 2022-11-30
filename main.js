@@ -50,4 +50,7 @@ window.addEventListener("keydown", (event) => { //adiciona um evento 'event' que
     containerCharacter.style.top = `${yPosition}px`; //definindo a posição top (limite de cima do container) com base na coordenada y, usada para referenciar a posição vertical de Jaypers
     containerCharacter.style.left = `${xPosition}px` //definindo a posição left (limite à esquerda do container) com base na coordenada x, usada para referenciar a posição horizontal de Jaypers
 
+    //as funções max e min retornam, respectivamente, o maior e menor valor entre dois valores
+    yPosition = Math.max(40, Math.min(SCREEN_HEIGHT - 200, yPosition)); //as duas funções buscam corrigir a posição y de Jaypers caso ele exceda os limites superior ou inferior da tela, atribuindo um valor coveniente a yPosition caso isso ocorra
+    xPosition = Math.max(0, Math.min(SCREEN_WIDTH - 190, xPosition)); //as duas funções buscam corrigir a posição x de Jaypers caso ele exceda os limites esquerdo ou direito da tela, atribuindo um valor coveniente a xPosition caso isso ocorra
 });
